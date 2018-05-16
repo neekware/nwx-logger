@@ -11,7 +11,7 @@
 
 # How to install
 
-    npm i @nwx/logger <|OR|> yarn add @nwx/logger
+    npm i @nwx/logger |OR| yarn add @nwx/logger
 
 # How to use
 
