@@ -5,10 +5,6 @@
 [![status-image]][status-link]
 [![coverage-image]][coverage-link]
 
-# Overview
-
-**@nwx/logger** attempts to streamline the app configuration while keeping it **DRY**.
-
 # How to install
 
     npm i @nwx/logger |OR| yarn add @nwx/logger
