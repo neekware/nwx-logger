@@ -4,9 +4,6 @@
   "lib": {
     "flatModuleFile": "nwx-logger",
     "entryFile": "index.ts",
-    "umdModuleIds": {
-      "lodash": "lodash",
-      "rxjs": "rxjs"
-    }
+    "umdModuleIds": {}
   }
 }
