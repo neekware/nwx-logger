@@ -4,7 +4,7 @@ import { LogLevels } from 'pkgs/logger';
 
 export const environment: AppCfg = {
   // app name
-  appName: '@nwx/cfg',
+  appName: '@nwx/logger',
   // target (browser, mobile, desktop)
   target: TargetPlatform.web,
   // production, staging or development
