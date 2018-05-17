@@ -3,6 +3,6 @@
   "description": "A simple logger module for Angular applications",
   "peerDependencies": {
     "@angular/core": "^6.0.0",
-    "@nwx/cfg": "^0.0.6"
+    "@nwx/cfg": "^1.0.0"
   }
 }
