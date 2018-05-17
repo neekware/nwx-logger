@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
+
 import { CfgService, DefaultCfg } from '@nwx/cfg';
+
+import { LogService } from 'pkgs/logger';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +12,8 @@ import { CfgService, DefaultCfg } from '@nwx/cfg';
 export class AppComponent {
   title = 'Neekware';
   options = {};
-  constructor(public cfg: CfgService) {
+  constructor(public cfg: CfgService, public log: LogService) {
     this.title = this.cfg.options.appName;
+    this.log.info('AppComponent loaded ...');
   }
 }
