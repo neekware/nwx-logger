@@ -1,0 +1,12 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../builds/nwx-logger",
+  "lib": {
+    "flatModuleFile": "nwx-logger",
+    "entryFile": "index.ts",
+    "umdModuleIds": {
+      "lodash": "lodash",
+      "rxjs": "rxjs"
+    }
+  }
+}
