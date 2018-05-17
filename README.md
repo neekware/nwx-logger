@@ -74,7 +74,8 @@ export class AppComponent {
 
 # Note:
 
-You may want to set the log level to `debug` for development and `warn` for production.
+1.  `@nwx/logger` depends on `@nwx/cfg` to access its config file and env variables.
+2.  You may want to set the log level to `debug` for development and `warn` for production.
 
 # Running the tests
 
