@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CfgService, DefaultCfg } from 'pkgs/cfg';
+import { CfgService, DefaultCfg } from '@nwx/cfg';
 
 @Component({
   selector: 'app-root',

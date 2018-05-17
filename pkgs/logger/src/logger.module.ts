@@ -9,7 +9,7 @@
 import { NgModule, ModuleWithProviders, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { LogService } from './log.service';
+import { LogService } from './logger.service';
 
 @NgModule({
   imports: [CommonModule]

@@ -1,5 +1,5 @@
 {
-  "name": "@nwx/log",
+  "name": "@nwx/logger",
   "description": "A simple logger module for an angular app",
   "peerDependencies": {
     "lodash": "^4.17.5",

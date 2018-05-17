@@ -11,8 +11,8 @@ import { isPlatformBrowser } from '@angular/common';
 
 import { CfgService, AppCfg } from '@nwx/cfg';
 
-import { LogLevels, LogNames, LogColors } from './log.types';
-import { LogCfgDefault } from './log.defaults';
+import { LogLevels, LogNames, LogColors } from './logger.types';
+import { LogCfgDefault } from './logger.defaults';
 
 /**
  * An injectable class that handles logging service

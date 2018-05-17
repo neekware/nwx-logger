@@ -6,7 +6,7 @@ import { resolve } from 'path';
 import * as program from 'commander';
 import { parse, SemVer } from 'semver';
 
-const projName = 'nwx-cfg';
+const projName = 'nwx-logger';
 const projDir = resolve(__dirname, '..');
 const porjPkgJson = require(path.join(projDir, 'package.json'));
 const moduleBuildPath = path.join(projDir, 'builds', projName);
@@ -57,7 +57,7 @@ async function buildPackage() {
     const cmd = `ng build --prod`;
     console.log(cmd);
     await execute(cmd).catch(error => {
-      console.log(`Failed to build @nwx/cfg ... ${error}`);
+      console.log(`Failed to build @nwx/logger ... ${error}`);
       return false;
     });
   }
@@ -111,9 +111,9 @@ async function main() {
 
 program
   .version('0.0.1', '-v, --version')
-  .option('-b, --build', 'Build @nwx/cfg')
-  .option('-p, --publish', 'Publish @nwx/cfg@latest')
-  .option('-d, --dev', 'Publish @nwx/cfg@next')
+  .option('-b, --build', 'Build @nwx/logger')
+  .option('-p, --publish', 'Publish @nwx/logger@latest')
+  .option('-d, --dev', 'Publish @nwx/logger@next')
   .parse(process.argv);
 
 main();

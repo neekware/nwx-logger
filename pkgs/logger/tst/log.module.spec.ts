@@ -1,4 +1,4 @@
-import { LogModule } from '../src/log.module';
+import { LogModule } from '../src/logger.module';
 
 describe('JwtModule', () => {
   let logModule: LogModule;

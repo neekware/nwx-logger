@@ -6,6 +6,6 @@
  * found in the LICENSE file at http://neekware.com/license/MIT.html
  */
 
-export { LogCfg, LogLevels } from './src/log.types';
-export { LogModule } from './src/log.module';
-export { LogService } from './src/log.service';
+export { LogCfg, LogLevels } from './src/logger.types';
+export { LogModule } from './src/logger.module';
+export { LogService } from './src/logger.service';

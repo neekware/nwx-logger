@@ -6,7 +6,7 @@
  * found in the LICENSE file at http://neekware.com/license/MIT.html
  */
 
-import { LogCfg, LogLevels } from './log.types';
+import { LogCfg, LogLevels } from './logger.types';
 
 /**
  * Default configuration - logger module
