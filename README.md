@@ -3,6 +3,7 @@
 **A simple logger module for Angular applications**
 
 [![status-image]][status-link]
+[![version-image]][version-link]
 [![coverage-image]][coverage-link]
 
 # How to install
@@ -114,5 +115,9 @@ X.Y.Z Version
 
 [status-image]: https://secure.travis-ci.org/neekware/nwx-logger.png?branch=master
 [status-link]: http://travis-ci.org/neekware/nwx-logger?branch=master
+
+[version-image]: https://img.shields.io/npm/v/@nwx/cfg.svg
+[version-link]: https://www.npmjs.com/package/@nwx/cfg
+
 [coverage-image]: https://coveralls.io/repos/neekware/nwx-logger/badge.svg
 [coverage-link]: https://coveralls.io/r/neekware/nwx-logger
