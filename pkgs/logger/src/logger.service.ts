@@ -12,7 +12,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { CfgService, AppCfg } from '@nwx/cfg';
 
 import { LogLevels, LogNames, LogColors } from './logger.types';
-import { LogCfgDefault } from './logger.defaults';
+import { DefaultLogCfg } from './logger.defaults';
 
 /**
  * An injectable class that handles logging service
@@ -21,11 +21,11 @@ import { LogCfgDefault } from './logger.defaults';
   providedIn: 'root'
 })
 export class LogService {
-  private isPlatformIE = false;
-  private options: AppCfg = null;
+  public isPlatformIE = false;
+  private _options: AppCfg = null;
 
-  constructor(@Inject(PLATFORM_ID) private platformId, private cfg: CfgService) {
-    this.options = { log: { ...LogCfgDefault }, ...cfg.options };
+  constructor(@Inject(PLATFORM_ID) public platformId, public cfg: CfgService) {
+    this._options = { log: { ...DefaultLogCfg }, ...cfg.options };
     if (isPlatformBrowser(platformId)) {
       this.isPlatformIE = !!(
         navigator.userAgent.match(/Edge\//) ||
@@ -34,6 +34,10 @@ export class LogService {
       );
     }
     this.debug('LogService ready ...');
+  }
+
+  get options() {
+    return this._options;
   }
 
   /**
@@ -95,7 +99,7 @@ export class LogService {
    * @param extras extra message
    */
   private doLog(level: LogLevels, message: any, extras: any[] = []) {
-    if (message && level !== LogLevels.none && level <= this.options.log.level) {
+    if (message && level !== LogLevels.none && level <= this._options.log.level) {
       if (this.isPlatformIE) {
         this.handleIE(level, message, extras);
       } else {

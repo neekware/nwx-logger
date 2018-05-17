@@ -11,6 +11,6 @@ import { LogCfg, LogLevels } from './logger.types';
 /**
  * Default configuration - logger module
  */
-export const LogCfgDefault: LogCfg = {
+export const DefaultLogCfg: LogCfg = {
   level: LogLevels.none
 };
