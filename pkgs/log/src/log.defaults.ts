@@ -6,8 +6,11 @@
  * found in the LICENSE file at http://neekware.com/license/MIT.html
  */
 
-export * from './src/cfg.types';
-export * from './src/cfg.defaults';
+import { LogCfg, LogLevels } from './log.types';
 
-export { CfgModule } from './src/cfg.module';
-export { CfgService } from './src//cfg.service';
+/**
+ * Default configuration - logger module
+ */
+export const LogCfgDefault: LogCfg = {
+  level: LogLevels.none
+};

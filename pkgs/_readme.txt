@@ -1,4 +1,3 @@
-Cfg module
+SINGLETON (CORE)
 
-- module
-- tests
+This module handles application-wide logging.

@@ -1,0 +1,10 @@
+{
+  "name": "@nwx/log",
+  "description": "A simple logger module for an angular app",
+  "peerDependencies": {
+    "lodash": "^4.17.5",
+    "rxjs": "^6.0.0 || ^5.6.0-forward-compat.4",
+    "@angular/core": "^6.0.0",
+    "@nwx/cfg": "^0.0.6"
+  }
+}

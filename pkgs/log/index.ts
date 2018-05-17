@@ -6,8 +6,6 @@
  * found in the LICENSE file at http://neekware.com/license/MIT.html
  */
 
-import { EventEmitter } from '@angular/core';
-
-import { get, pick } from 'lodash';
-
-import { AppCfg } from './cfg.types';
+export { LogCfg, LogLevels } from './src/log.types';
+export { LogModule } from './src/log.module';
+export { LogService } from './src/log.service';
