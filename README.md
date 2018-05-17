@@ -75,8 +75,9 @@ export class AppComponent {
 # Note:
 
 1. `@nwx/logger` depends on `@nwx/cfg` for accessing the log level.
-2. You may want to set the log level to `debug` for development and `warn` for production.
+2. You may want to set the log level to `LogLevels.debug` for development and `LogLevels.warn` for production.
 3. `@nwx/logger` should be imported at the root level of your application.
+4. To disable the logger, set the level to `LogLevels.none`.
 
 # Running the tests
 
