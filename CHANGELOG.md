@@ -1,3 +1,9 @@
+## 1.0.0
+
+Enhancements:
+
+  - More test, cleanup
+
 ## 0.0.2
 
 Enhancements:

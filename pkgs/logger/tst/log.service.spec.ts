@@ -29,15 +29,22 @@ describe('LogService', () => {
 
   it(
     'should be have the app config options',
-    inject([CfgService, CFG_OPTIONS, LogService], (service: LogService) => {
+    inject([LogService], (service: LogService) => {
       expect(service.options.appName).toBe(AppEnv.appName);
     })
   );
 
   it(
     'should be have the module config options',
-    inject([CfgService, CFG_OPTIONS, LogService], (service: LogService) => {
+    inject([LogService], (service: LogService) => {
       expect(service.options.log.level).toBe(LogLevels.none);
+    })
+  );
+
+  it(
+    'should log without failure',
+    inject([LogService], (service: LogService) => {
+      expect(service.debug('Logging a debug')).toEqual(undefined);
     })
   );
 });
