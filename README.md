@@ -15,7 +15,70 @@
 
 # How to use
 
-# Advanced usage:
+```typescript
+// In your environment{prod,staging}.ts
+
+import { AppCfg, TargetPlatform, HttpMethod } from '@nwx/cfg';
+
+import { LogLevels } from 'pkgs/logger';
+
+export const environment: AppCfg = {
+  // app name
+  appName: 'Neekware',
+  // target (browser, mobile, desktop)
+  target: TargetPlatform.web,
+  // production, staging or development
+  production: false,
+  // one or more app specific field(s)
+  log: {
+    // Log level, (default = none)
+    level: LogLevels.info
+  }
+};
+```
+
+```typescript
+// In your app.module.ts
+
+import { CfgModule } from '@nwx/cfg';
+import { LoggerModule } from '@nwx/logger';
+import { environment } from '../environments/environment';
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule, CfgModule.forRoot(environment), LoggerModule],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
+```
+
+```typescript
+// In your app.component.ts or (some.service.ts)
+
+import { Component } from '@angular/core';
+import { CfgService } from '@nwx/cfg';
+import { LoggerService } from '@nwx/logger';
+
+@Component({
+  selector: 'app-root'
+})
+export class AppComponent {
+  title = 'Neekware';
+  options = {};
+  constructor(public cfg: CfgService, public log: LogService) {
+    this.title = this.cfg.options.appName;
+    this.log.critical('Logging critical');
+    this.log.error('Logging error and above');
+    this.log.warn('Logging warn and above');
+    this.log.info('Logging info and above');
+    this.log.debug('Logging debug and above');
+  }
+}
+```
+
+# Note:
+
+You may want to set the log level to `debug` for development and `warn` for production.
 
 # Running the tests
 
