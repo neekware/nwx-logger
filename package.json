@@ -5,7 +5,7 @@
     "type": "git",
     "url": "git+https://github.com/neekware/nwx-logger.git"
   },
-  "keywords": ["ng", "angular", "config", "configuration"],
+  "keywords": ["ng", "angular", "logging", "logger", "logs"],
   "author": "Val Neekman",
   "contributors": [],
   "license": "MIT",
