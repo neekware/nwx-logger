@@ -10,7 +10,6 @@ import { LogService } from '../src/logger.service';
 const AppEnv: AppCfg = {
   appName: '@nwx/logger',
   production: false,
-  log: DefaultLogCfg
 };
 
 describe('LogService', () => {
@@ -35,7 +34,7 @@ describe('LogService', () => {
   );
 
   it(
-    'should be have the module config options',
+    'should be have the module default config options',
     inject([LogService], (service: LogService) => {
       expect(service.options.log.level).toBe(LogLevels.none);
     })
