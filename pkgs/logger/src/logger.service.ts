@@ -9,6 +9,7 @@
 import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
+import { merge } from 'lodash';
 import { CfgService, AppCfg } from '@nwx/cfg';
 
 import { LogLevels, LogNames, LogColors } from './logger.types';
@@ -25,7 +26,7 @@ export class LogService {
   private _options: AppCfg = null;
 
   constructor(@Inject(PLATFORM_ID) public platformId, public cfg: CfgService) {
-    this._options = { log: { ...DefaultLogCfg }, ...cfg.options };
+    this._options = merge({ log: { ...DefaultLogCfg } }, cfg.options);
     if (isPlatformBrowser(platformId)) {
       this.isPlatformIE = !!(
         navigator.userAgent.match(/Edge\//) ||
