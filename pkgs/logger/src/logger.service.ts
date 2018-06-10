@@ -26,7 +26,7 @@ export class LogService {
   private _options: AppCfg = null;
 
   constructor(@Inject(PLATFORM_ID) public platformId, public cfg: CfgService) {
-    this._options = merge({ log: { ...DefaultLogCfg } }, cfg.options);
+    this._options = merge({ log: DefaultLogCfg }, cfg.options);
     if (isPlatformBrowser(platformId)) {
       this.isPlatformIE = !!(
         navigator.userAgent.match(/Edge\//) ||
