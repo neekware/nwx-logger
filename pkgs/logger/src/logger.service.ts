@@ -100,18 +100,25 @@ export class LogService {
    * @param extras extra message
    */
   private doLog(level: LogLevels, message: any, extras: any[] = []) {
-    if (message && level !== LogLevels.none && level <= this._options.log.level) {
-      if (this.isPlatformIE) {
-        this.handleIE(level, message, extras);
-      } else {
-        const color = LogColors[level];
-        console.log(
-          `%c${this.time} [${LogNames[level]}]`,
-          `color:${color}`,
-          message,
-          ...extras
-        );
-      }
+    if (
+      !message ||
+      level === LogLevels.none ||
+      level > this._options.log.level ||
+      this._options.log.level === LogLevels.none
+    ) {
+      return;
+    }
+
+    if (this.isPlatformIE) {
+      this.handleIE(level, message, extras);
+    } else {
+      const color = LogColors[level];
+      console.log(
+        `%c${this.time} [${LogNames[level]}]`,
+        `color:${color}`,
+        message,
+        ...extras
+      );
     }
   }
 
