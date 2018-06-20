@@ -1,3 +1,9 @@
+## 1.0.4
+
+Bugfix:
+
+  - Disable logs on level == none
+
 ## 1.0.3
 
 Enhancements:
