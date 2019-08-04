@@ -1,3 +1,9 @@
+## 1.0.5
+
+Enhancements:
+
+  - Upgrade to ng 8.2
+
 ## 1.0.4
 
 Bugfix:

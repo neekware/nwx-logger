@@ -2,8 +2,8 @@
   "name": "@nwx/logger",
   "description": "A simple logger module for Angular applications",
   "peerDependencies": {
-    "lodash": "^4.17.15",
     "@angular/core": "^6.0.0",
+    "lodash": "^4.17.15",
     "@nwx/cfg": "^1.0.2"
   }
 }

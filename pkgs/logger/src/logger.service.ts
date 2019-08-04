@@ -139,7 +139,7 @@ export class LogService {
         logger = console.warn;
         break;
       case LogLevels.info:
-        logger = console.info;
+        logger = console.log;
         break;
       default:
         return;

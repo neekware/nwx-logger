@@ -8,8 +8,9 @@ import { LogModule } from '../src/logger.module';
 import { LogService } from '../src/logger.service';
 
 const AppEnv: AppCfg = {
+  version: '1.0.0',
   appName: '@nwx/logger',
-  production: false,
+  production: false
 };
 
 describe('LogService', () => {
@@ -19,31 +20,25 @@ describe('LogService', () => {
     });
   });
 
-  it(
-    'should be created',
-    inject([LogService], (service: LogService) => {
-      expect(service).toBeTruthy();
-    })
-  );
+  it('should be created', inject([LogService], (service: LogService) => {
+    expect(service).toBeTruthy();
+  }));
 
-  it(
-    'should be have the app config options',
-    inject([LogService], (service: LogService) => {
+  it('should be have the app config options', inject(
+    [LogService],
+    (service: LogService) => {
       expect(service.options.appName).toBe(AppEnv.appName);
-    })
-  );
+    }
+  ));
 
-  it(
-    'should be have the module default config options',
-    inject([LogService], (service: LogService) => {
+  it('should be have the module default config options', inject(
+    [LogService],
+    (service: LogService) => {
       expect(service.options.log.level).toBe(LogLevels.none);
-    })
-  );
+    }
+  ));
 
-  it(
-    'should log without failure',
-    inject([LogService], (service: LogService) => {
-      expect(service.debug('Logging a debug')).toEqual(undefined);
-    })
-  );
+  it('should log without failure', inject([LogService], (service: LogService) => {
+    expect(service.debug('Logging a debug')).toEqual(undefined);
+  }));
 });

@@ -3,6 +3,7 @@ import { AppCfg, TargetPlatform, HttpMethod } from '@nwx/cfg';
 import { LogLevels } from 'pkgs/logger';
 
 export const environment: AppCfg = {
+  version: '1.0.0',
   // app name
   appName: '@nwx/logger',
   // target (browser, mobile, desktop)

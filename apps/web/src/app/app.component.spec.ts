@@ -8,6 +8,7 @@ import { LogModule } from 'pkgs/logger';
 import { AppComponent } from './app.component';
 
 const AppEnv: AppCfg = {
+  version: '1.0.0',
   appName: '@nwx/logger',
   production: false
 };
