@@ -125,3 +125,7 @@ X.Y.Z Version
 
 [download-image]: https://img.shields.io/npm/dm/@nwx/logger.svg
 [download-link]: https://www.npmjs.com/package/@nwx/logger
+
+# Sponsors
+
+[Surge](https://github.com/surgeforward)
