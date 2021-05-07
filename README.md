@@ -2,10 +2,12 @@
 
 **A simple logger module for Angular applications**
 
-[![status-image]][status-link]
+# Library was deprecated in favor of [`@fullerstack/ngx-logger`](https://github.com/neekware/fullerstack/tree/main/libs/ngx-logger)
+
+<!-- [![status-image]][status-link]
 [![version-image]][version-link]
 [![coverage-image]][coverage-link]
-[![download-image]][download-link]
+[![download-image]][download-link] -->
 
 # How to install
 
@@ -128,4 +130,4 @@ X.Y.Z Version
 
 # Sponsors
 
-[Surge](https://github.com/surgeforward)
+[Neekware Inc.](https://github.com/neekware)
