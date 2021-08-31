@@ -1,8 +1,8 @@
+# Library was deprecated in favor of [`@fullerstack/ngx-logger`](https://github.com/neekware/fullerstack/tree/main/libs/ngx-logger)
+
 # @nwx/logger
 
 **A simple logger module for Angular applications**
-
-# Library was deprecated in favor of [`@fullerstack/ngx-logger`](https://github.com/neekware/fullerstack/tree/main/libs/ngx-logger)
 
 <!-- [![status-image]][status-link]
 [![version-image]][version-link]
